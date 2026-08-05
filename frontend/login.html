@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAHANAAYAK PORTAL</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/forms.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-card-wrap" aria-label="Command center authentication">
+        <div class="center-card panel">
+          <div class="login-brand">
+            <div class="brand-title">MAHANAAYAK PORTAL</div>
+            <div class="brand-subtitle">Command Center Authentication</div>
+          </div>
+
+          <form data-login-form class="form-grid" aria-label="Login form">
+            <div class="form-row">
+              <label class="input-label" for="userId">User ID</label>
+              <input class="text-input" id="userId" name="userId" type="text" aria-label="User ID" required />
+            </div>
+
+            <div class="form-row">
+              <label class="input-label" for="password">Password</label>
+              <input class="text-input" id="password" name="password" type="password" aria-label="Password" required />
+            </div>
+
+            <div id="loginError" class="login-error" aria-live="polite"></div>
+
+            <button class="primary-button" type="submit">Login</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/auth.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

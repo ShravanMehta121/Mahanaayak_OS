@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Campaign Planner</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page campaign-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room Dashboard</span></a>
+          <a class="sidebar-link active" href="./campaign.html" aria-current="page"><span class="icon-circle"><i class="fa-solid fa-book-open"></i></span><span>AI Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-chart-simple"></i></span><span>Department Performance</span></a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="sidebar-footer">
+          <a class="sidebar-link logout" href="#"><span class="icon-circle"><i class="fa-solid fa-arrow-right-from-bracket"></i></span><span>Logout</span></a>
+        </div>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Welcome, <span class="brand-accent">Amit Bangar</span></h1>
+            <div class="page-header-subtitle">Pune Constituency Intelligence</div>
+          </div>
+
+          <div class="page-header-actions war-room-top-actions">
+            <div class="kpi-card war-room-kpi campaign-kpi-main">
+              <span class="kpi-label">Win Probability</span>
+              <div class="war-room-kpi-row"><span class="war-room-kpi-icon"><i class="fa-solid fa-arrow-trend-up"></i></span><span class="kpi-value">65%</span></div>
+            </div>
+          </div>
+        </header>
+
+        <section class="page-intro campaign-intro">
+          <div>
+            <h2 class="page-intro-title">AI Predictive Campaign Planner</h2>
+            <div class="page-intro-copy">Real-time narrative planning, counter-strategy composition, and manifesto alignment.</div>
+          </div>
+
+          <div class="page-intro-actions intro-actions">
+            <button class="action-button ghost-button small-button campaign-refresh" type="button"><i class="fa-solid fa-rotate"></i> Refresh AI Strategy</button>
+          </div>
+        </section>
+
+        <section class="page-grid two-up campaign-top-grid" aria-label="Campaign strategy cards">
+          <article class="panel campaign-card campaign-outline-cyan">
+            <div class="campaign-card-head">
+              <div class="campaign-eyebrow">Executive Outlook</div>
+              <div class="campaign-card-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+            <h3 class="campaign-main-title">Pune Infrastructure Crisis: A Call for Civic Restoration</h3>
+            <div class="campaign-highlight">Core Sentiment: High frustration characterized by a sense of systemic neglect, particularly regarding basic utility reliability and public safety hazards.</div>
+            <p class="campaign-body">The campaign must pivot from general promises to a "Fix-It-First" platform. By highlighting the high volume of critical, pending infrastructure issues, we can position the incumbent as negligent and ourselves as the party of immediate, tangible action.</p>
+          </article>
+
+          <article class="panel campaign-card campaign-outline-purple">
+            <div class="campaign-card-head">
+              <div class="campaign-eyebrow">Manifesto Foundations</div>
+              <div class="campaign-card-icon"><i class="fa-regular fa-bookmark"></i></div>
+            </div>
+            <div class="manifesto-block">
+              <div class="manifesto-title">Utility Reliability</div>
+              <div class="manifesto-subtitle">Target: Middle-class families and residential housing societies</div>
+              <div class="manifesto-promise">Promise: "Establish a 24-hour rapid response task force for water and power restoration."</div>
+              <ul class="manifesto-list">
+                <li>No more "pending" status for critical water leaks.</li>
+                <li>Accountability for billing errors and service outages.</li>
+                <li>Modernizing aging pipe and grid infrastructure.</li>
+              </ul>
+            </div>
+            <div class="manifesto-block manifesto-block-secondary">
+              <div class="manifesto-title">Public Safety and Road Infrastructure</div>
+              <div class="manifesto-subtitle">Target: Daily commuters and small business owners</div>
+              <div class="manifesto-promise">Promise: "Zero-tolerance policy for hazardous road conditions and unfinished construction sites."</div>
+              <ul class="manifesto-list">
+                <li>Immediate repair of sinkholes and bridge cracks.</li>
+                <li>Standardizing road maintenance to prevent accidents.</li>
+                <li>Removing dangerous exposed wires and fallen poles.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section class="page-grid two-up campaign-bottom-grid" aria-label="Campaign support cards">
+          <article class="panel campaign-card campaign-outline-red">
+            <div class="campaign-card-head">
+              <div class="campaign-eyebrow">Resource Allocator</div>
+              <div class="campaign-card-icon"><i class="fa-solid fa-people-group"></i></div>
+            </div>
+            <div class="resource-label">Critical Target Areas</div>
+            <div class="resource-chips">
+              <span class="resource-chip">Water supply management</span>
+              <span class="resource-chip">Road safety and pothole repair</span>
+              <span class="resource-chip">Electrical grid stabilization</span>
+            </div>
+            <div class="cadre-box">
+              <div class="cadre-title">Cadre Orders</div>
+              <p class="cadre-copy">Deploy field teams to document and geotag open infrastructure hazards. Use this data to create "Neglect Maps" for social media and door-to-door canvassing to prove the current administration's failure.</p>
+            </div>
+            <p class="campaign-recommendation"><strong>Recommended Action:</strong> Launch a "Pune Fix-It" mobile app or hotline where citizens can report issues on-body to our campaign, which we will then escalate to the municipal authorities to demonstrate our proactive leadership.</p>
+          </article>
+
+          <article class="panel campaign-card campaign-outline-blue">
+            <div class="campaign-card-head">
+              <div class="campaign-eyebrow">Campaign Creative Hook</div>
+              <div class="campaign-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            </div>
+            <div class="slogan-box">
+              <div class="slogan-eyebrow">Rally Cry / Slogan</div>
+              <div class="slogan-text">"Pune Needs Action, Not Excuses: Let's Fix Our City Together."</div>
+            </div>
+            <div class="anchor-box">
+              <div class="anchor-eyebrow">Marketing Angle &amp; Media Anchor</div>
+              <p class="anchor-copy">Use high-contrast, "Before vs. After" style visuals showing current neglected sites versus digital renderings of restored, safe, and clean streets to inspire hope and urgency.</p>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/toast.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/campaign-details.js"></script>
+  </body>
+</html>

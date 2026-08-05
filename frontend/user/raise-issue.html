@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raise New Issue</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page issue-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="sidebar-link" href="./dashboard.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>Central Dashboard</span></a>
+          <a class="sidebar-link active" href="#" aria-current="page"><span class="icon-circle"><i class="fa-solid fa-circle-plus"></i></span><span>Raise New Issue</span></a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="sidebar-footer">
+          <a class="sidebar-link logout" href="#"><span class="icon-circle"><i class="fa-solid fa-arrow-right-from-bracket"></i></span><span>Logout</span></a>
+        </div>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Welcome, <span class="brand-accent">Office Desk</span></h1>
+            <div class="page-header-subtitle">Operational Processing Desk • Pune Constituency</div>
+          </div>
+
+          <div class="page-header-actions header-kpis" aria-label="Ticket status summary">
+            <div class="header-kpi">
+              <span class="header-kpi-label">Open Issues</span>
+              <div class="header-kpi-value">30</div>
+            </div>
+            <div class="header-kpi">
+              <span class="header-kpi-label">Pending Issues</span>
+              <div class="header-kpi-value">13</div>
+            </div>
+          </div>
+        </header>
+
+        <section class="issue-stage" aria-label="Citizen grievance form stage">
+          <article class="issue-form-card panel">
+            <div class="issue-form-heading">
+              <div class="issue-form-title-wrap">
+                <div class="issue-form-title"><span class="issue-form-title-icon"><i class="fa-solid fa-circle-plus"></i></span>Citizen Grievance Form</div>
+                <div class="issue-form-copy">Fill the form details to raise a Ticket in the system.</div>
+              </div>
+            </div>
+
+            <form class="issue-form-grid" aria-label="Citizen grievance form">
+              <div class="issue-grid-two">
+                <div class="form-row">
+                  <label class="input-label" for="voterId">Voter ID</label>
+                  <input class="text-input" id="voterId" name="voterId" type="text" placeholder="e.g. ABC1234567" />
+                </div>
+
+                <div class="form-row">
+                  <label class="input-label" for="fullName">Full Name</label>
+                  <input class="text-input" id="fullName" name="fullName" type="text" placeholder="Enter full name" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="input-label" for="department">Assigned Department</label>
+                <select class="select-input issue-select" id="department" name="department">
+                  <option selected>Select a department</option>
+                  <option>Utilities</option>
+                  <option>Public Works</option>
+                  <option>Energy</option>
+                  <option>Health</option>
+                </select>
+              </div>
+
+              <div class="issue-grid-two">
+                <div class="form-row">
+                  <label class="input-label" for="severity">Severity Level</label>
+                  <select class="select-input issue-select" id="severity" name="severity">
+                    <option>Medium</option>
+                    <option>Critical</option>
+                    <option>High</option>
+                    <option>Low</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <label class="input-label" for="status">Initial Operational Status</label>
+                  <select class="select-input issue-select" id="status" name="status">
+                    <option>Open</option>
+                    <option>Pending</option>
+                    <option>Closed</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="input-label" for="address">Complete Address *</label>
+                <input class="text-input" id="address" name="address" type="text" placeholder="Specify specific location coordinates or residential address..." required />
+              </div>
+
+              <div class="form-row" style="margin-top: var(--space-4);">
+                <div class="issue-form-title" style="font-size: 14px; color: var(--cyan); margin-bottom: var(--space-2);">
+                  <i class="fa-solid fa-location-dot"></i> Location Information
+                </div>
+              </div>
+
+              <div class="issue-grid-two">
+                <div class="form-row">
+                  <label class="input-label" for="state">State *</label>
+                  <input class="text-input" id="state" name="state" type="text" value="Maharashtra" required />
+                </div>
+                <div class="form-row">
+                  <label class="input-label" for="district">District</label>
+                  <input class="text-input" id="district" name="district" type="text" value="Pune" />
+                </div>
+              </div>
+
+              <div class="issue-grid-two">
+                <div class="form-row">
+                  <label class="input-label" for="city">City *</label>
+                  <input class="text-input" id="city" name="city" type="text" value="Pune" required />
+                </div>
+                <div class="form-row">
+                  <label class="input-label" for="ward">Ward Number *</label>
+                  <input class="text-input" id="ward" name="ward" type="text" placeholder="e.g. Ward 12" required />
+                </div>
+              </div>
+
+              <div class="issue-grid-two">
+                <div class="form-row">
+                  <label class="input-label" for="area">Area / Locality *</label>
+                  <input class="text-input" id="area" name="area" type="text" placeholder="e.g. Shivajinagar" required />
+                </div>
+                <div class="form-row">
+                  <label class="input-label" for="landmark">Landmark</label>
+                  <input class="text-input" id="landmark" name="landmark" type="text" placeholder="e.g. Near Bus Stand" />
+                </div>
+              </div>
+
+              <div class="issue-grid-two">
+                <div class="form-row">
+                  <label class="input-label" for="pincode">Pincode</label>
+                  <input class="text-input" id="pincode" name="pincode" type="text" placeholder="e.g. 411005" />
+                </div>
+                <div class="form-row">
+                  <label class="input-label" for="street">Street / Society Name</label>
+                  <input class="text-input" id="street" name="street" type="text" placeholder="e.g. FC Road / Shanivar Peth" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="input-label" for="description">Issue Description</label>
+                <textarea class="textarea-input issue-textarea" id="description" name="description" placeholder="Provide fully explicit technical details regarding infrastructure or civil failure context..."></textarea>
+              </div>
+
+              <div class="form-row">
+                <label class="input-label" for="remarks">Internal Staff Remarks</label>
+                <textarea class="textarea-input issue-textarea issue-textarea-sm" id="remarks" name="remarks" placeholder="Add any additional internal notes, follow-up actions, or staff observations here..."></textarea>
+              </div>
+
+              <div class="form-row">
+                <label class="input-label">Supporting Documents / Images (Multiple)</label>
+                <div class="file-control" role="group" aria-label="Supporting documents upload">
+                  <label class="file-button" for="attachments">Choose Files</label>
+                  <input class="file-input" id="attachments" name="attachments" type="file" multiple />
+                  <span class="file-status">No file chosen</span>
+                </div>
+                <div class="file-help">Upload relevant images, PDFs, or documents up to a few MBs total.</div>
+              </div>
+
+              <div class="issue-actions">
+                <button class="action-button ghost-button issue-clear" type="button">Clear Entries</button>
+                <button class="action-button secondary-button issue-submit" type="submit"><i class="fa-solid fa-check"></i> Register Grievance</button>
+              </div>
+            </form>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/utils.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+window.frontendTable = {
+  initialize() {},
+};

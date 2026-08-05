@@ -1,0 +1,127 @@
+.ticket-card {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(36, 40, 76, 0.96), rgba(30, 35, 67, 0.96));
+  border: 1px solid var(--border-soft);
+}
+
+.ticket-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.ticket-card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-card-title);
+  line-height: 1.1;
+  font-weight: 800;
+  color: #f0f4ff;
+}
+
+.ticket-card-eyebrow {
+  font-size: var(--font-small);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(173, 179, 210, 0.58);
+}
+
+.ticket-table-wrap {
+  position: relative;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.ticket-table-scroll {
+  max-height: 440px;
+  overflow: auto;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+
+.ticket-table-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.ticket-table-scroll::-webkit-scrollbar-track {
+  background: rgba(14, 18, 39, 0.55);
+}
+
+.ticket-table-scroll::-webkit-scrollbar-thumb {
+  background: rgba(189, 198, 255, 0.3);
+  border-radius: 999px;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ticket-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 48px;
+  background: rgba(59, 64, 103, 0.95);
+  color: rgba(193, 199, 225, 0.84);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: var(--font-label);
+  font-weight: 700;
+  text-align: left;
+  padding: 0 var(--space-4);
+}
+
+.ticket-table tbody td {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: var(--font-body);
+  color: #dde4ff;
+  vertical-align: middle;
+}
+
+.ticket-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.col-id { width: 8%; }
+.col-voter { width: 10%; }
+.col-date { width: 11%; }
+.col-name { width: 14%; }
+.col-dept { width: 13%; }
+.col-desc { width: 30%; }
+.col-remarks { width: 8%; }
+.col-status { width: 9%; }
+.col-severity { width: 11%; }
+
+.ticket-id {
+  color: #6e85ff;
+  font-size: var(--font-small);
+  font-weight: 700;
+}
+
+.voter-id {
+  color: rgba(173, 179, 210, 0.72);
+  font-size: 11px;
+}
+
+.issue-desc {
+  display: block;
+  font-size: 11px;
+  color: #f1f4ff;
+}
+
+.issue-address {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--font-small);
+  color: rgba(173, 179, 210, 0.72);
+}
+
+.staff-remarks {
+  color: rgba(173, 179, 210, 0.5);
+  text-align: center;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Department Performance</title>
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/buttons.css" />
+  <link rel="stylesheet" href="../css/forms.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+  <div class="dashboard-page department-page">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="sidebar-brand">
+        <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+        <div class="brand-subtitle">STAFF PORTAL</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i
+              class="fa-solid fa-grid-2"></i></span><span>War Room Dashboard</span></a>
+        <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i
+              class="fa-solid fa-book-open"></i></span><span>AI Campaign Planner</span></a>
+        <a class="sidebar-link active" href="./department.html" aria-current="page"><span class="icon-circle"><i
+              class="fa-solid fa-chart-simple"></i></span><span>Department Performance</span></a>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+
+      <div class="sidebar-footer">
+        <a class="sidebar-link logout" href="#"><span class="icon-circle"><i
+              class="fa-solid fa-arrow-right-from-bracket"></i></span><span>Logout</span></a>
+      </div>
+    </aside>
+
+    <main class="content-shell">
+      <header class="page-header">
+        <div>
+          <h1 class="page-header-title">Welcome, <span class="brand-accent">Amit Bangar</span></h1>
+          <div class="page-header-subtitle">Pune Constituency Intelligence</div>
+        </div>
+
+        <div class="page-header-actions war-room-top-actions">
+          <div class="kpi-card war-room-kpi department-kpi-main">
+            <span class="kpi-label">Win Probability</span>
+            <div class="war-room-kpi-row"><span class="war-room-kpi-icon"><i
+                  class="fa-solid fa-arrow-trend-up"></i></span><span class="kpi-value">65%</span></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="page-intro department-intro">
+        <div>
+          <h2 class="page-intro-title">Department Performance Engine</h2>
+          <div class="page-intro-copy">Live operational command view of public utility departments.</div>
+        </div>
+
+        <div class="page-intro-actions intro-actions">
+          <button data-action="sync-data" class="action-button ghost-button small-button department-sync"
+            type="button"><i class="fa-solid fa-rotate"></i> Sync Department Analytics</button>
+        </div>
+      </section>
+
+      <section class="department-kpis" aria-label="Department stat summary">
+        <article class="dept-stat-card dept-cyan">
+          <div class="dept-stat-label">Resolution Rate</div>
+          <div class="dept-stat-value">24.6%</div>
+          <div class="dept-stat-copy">Cross-department case closure threshold</div>
+        </article>
+        <article class="dept-stat-card dept-green">
+          <div class="dept-stat-label">Avg Resolution Velocity</div>
+          <div class="dept-stat-value">0.0 Days</div>
+          <div class="dept-stat-copy">Median time to finalize workflow tickets</div>
+        </article>
+        <article class="dept-stat-card dept-amber">
+          <div class="dept-stat-label">Active Backlog Load</div>
+          <div class="dept-stat-value">43</div>
+          <div class="dept-stat-copy">Governance awaiting active closure</div>
+        </article>
+        <article class="dept-stat-card dept-red">
+          <div class="dept-stat-label">High Risk Escalations</div>
+          <div class="dept-stat-value">25</div>
+          <div class="dept-stat-copy">High &amp; Critical issue red assignments</div>
+        </article>
+      </section>
+
+      <section class="page-grid two-up-wide department-grid department-upper" aria-label="Department charts top row">
+        <article class="panel chart-card department-chart-card wide-chart-card">
+          <div class="chart-title">Department Workload &amp; Backlog Balance</div>
+          <div class="chart-canvas-wrap department-bar-wrap">
+            <canvas id="deptBarChart"></canvas>
+          </div>
+        </article>
+
+        <article class="panel chart-card department-chart-card">
+          <div class="chart-title">Turnaround Efficiency Target (Avg Days)</div>
+          <div class="chart-canvas-wrap department-line-wrap">
+            <canvas id="turnaroundLineChart"></canvas>
+          </div>
+        </article>
+      </section>
+
+      <section class="page-grid two-up department-grid department-lower" aria-label="Department charts bottom row">
+        <article class="panel chart-card department-chart-card">
+          <div class="chart-title">Departmental Severity Risk Factor</div>
+          <div class="chart-canvas-wrap department-radar-wrap">
+            <canvas id="severityRadarChart"></canvas>
+          </div>
+        </article>
+
+        <article class="panel leaderboard-card">
+          <div class="panel-header">
+            <div class="chart-title"><span class="leaderboard-icon"><i class="fa-solid fa-trophy"></i></span>Efficiency
+              Leaderboard Metric</div>
+          </div>
+          <div class="leaderboard-table-wrap">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th>Department Name</th>
+                  <th class="leader-val">Tickets Solved</th>
+                  <th class="leader-sla">Avg SLA (Days)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="leader-rank top-rank">#1</span> Public Works</td>
+                  <td class="leader-val">2</td>
+                  <td class="leader-sla">0 Days</td>
+                </tr>
+                <tr>
+                  <td><span class="leader-rank top-rank">#2</span> Utilities</td>
+                  <td class="leader-val">2</td>
+                  <td class="leader-sla">0 Days</td>
+                </tr>
+                <tr>
+                  <td><span class="leader-rank top-rank">#3</span> Municipal Corporation (PMC)</td>
+                  <td class="leader-val">0</td>
+                  <td class="leader-sla">0 Days</td>
+                </tr>
+                <tr>
+                  <td><span class="leader-rank">#4</span> Energy</td>
+                  <td class="leader-val">1</td>
+                  <td class="leader-sla">0 Days</td>
+                </tr>
+                <tr>
+                  <td><span class="leader-rank">#5</span> Health</td>
+                  <td class="leader-val">2</td>
+                  <td class="leader-sla">0 Days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/guard.js"></script>
+  <script src="../js/toast.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/charts.js"></script>
+  <script src="../js/sync.js"></script>
+</body>
+
+</html>

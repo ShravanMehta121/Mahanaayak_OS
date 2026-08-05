@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>War Room Dashboard</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="sidebar-link active" href="./war-room.html" aria-current="page"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room Dashboard</span></a>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-book-open"></i></span><span>AI Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-chart-simple"></i></span><span>Department Performance</span></a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="sidebar-footer">
+          <a class="sidebar-link logout" href="#"><span class="icon-circle"><i class="fa-solid fa-arrow-right-from-bracket"></i></span><span>Logout</span></a>
+        </div>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Welcome, <span class="brand-accent">Amit Bangar</span></h1>
+            <div class="page-header-subtitle">Pune Constituency Intelligence</div>
+          </div>
+
+          <div class="page-header-actions header-kpis">
+            <div class="header-kpi war-room-kpi">
+              <span class="header-kpi-label">Win Probability</span>
+              <div class="header-kpi-value"><i class="fa-solid fa-arrow-trend-up"></i>65%</div>
+            </div>
+          </div>
+        </header>
+
+        <section class="page-intro war-room-intro">
+          <div>
+            <h2 class="page-intro-title">Constituency Command Center</h2>
+            <div class="page-intro-copy">Operational intelligence feed, cross-department analytics, and real-time issue telemetry.</div>
+          </div>
+
+          <div class="page-intro-actions intro-actions">
+            <button data-action="sync-data" class="action-button button-purple small-button war-room-refresh" type="button"><i class="fa-solid fa-rotate"></i> Refresh Insights</button>
+          </div>
+        </section>
+
+        <section class="page-grid three-up war-room-upper" aria-label="War room distribution charts">
+          <article class="panel chart-card war-room-chart-card">
+            <div class="chart-title">Severity-wise Distribution</div>
+            <div class="chart-canvas-wrap chart-pie-wrap">
+              <canvas id="severityChart"></canvas>
+            </div>
+          </article>
+
+          <article class="panel chart-card war-room-chart-card">
+            <div class="chart-title">Department-wise Distribution</div>
+            <div class="chart-canvas-wrap chart-pie-wrap">
+              <canvas id="deptChart"></canvas>
+            </div>
+          </article>
+
+          <article class="panel chart-card war-room-chart-card">
+            <div class="chart-title">Status-wise Distribution</div>
+            <div class="chart-canvas-wrap chart-pie-wrap">
+              <canvas id="statusChart"></canvas>
+            </div>
+          </article>
+        </section>
+
+        <section class="page-grid two-up-wide war-room-mid" aria-label="Map and critical actions">
+          <article class="panel map-card">
+            <div class="panel-header map-header">
+              <div class="chart-title">Live Issue Intelligence</div>
+              <div class="map-region">Pune Metro Area</div>
+            </div>
+
+            <div class="gis-panel">
+              <div class="gis-icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="gis-badge"><i class="fa-solid fa-clock"></i> Backend Integration Pending</div>
+
+              <div class="gis-features-list">
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Live citizen complaints</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Ward-wise issue locations</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Real-time GPS coordinates</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Department-wise issue markers</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> AI hotspot clustering</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Severity heatmap</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Route optimization for field officers</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Ward boundaries</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Live traffic overlays</div>
+                <div class="gis-feature-item"><i class="fa-solid fa-circle"></i> Incident timeline</div>
+              </div>
+
+              <div class="gis-status-grid">
+                <div class="gis-status-card">
+                  <span class="gis-status-label">Status</span>
+                  <span class="gis-status-val">Pending</span>
+                </div>
+                <div class="gis-status-card">
+                  <span class="gis-status-label">API</span>
+                  <span class="gis-status-val">Awaiting GIS</span>
+                </div>
+                <div class="gis-status-card">
+                  <span class="gis-status-label">Realtime</span>
+                  <span class="gis-status-val">Disabled</span>
+                </div>
+                <div class="gis-status-card">
+                  <span class="gis-status-label">Version</span>
+                  <span class="gis-status-val">v1.0 Ready</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel feed-card">
+            <div class="panel-header feed-header">
+              <div class="chart-title"><span class="feed-icon"><i class="fa-solid fa-bolt"></i></span>Critical Actions</div>
+            </div>
+            <div class="feed-list" role="list">
+              <div class="feed-item feed-critical" role="listitem">CRITICAL: Your Voter Varun Verma has issue related with Public Works Department</div>
+              <div class="feed-item feed-critical" role="listitem">CRITICAL: Your Voter Sneha Dutta has issue related with Utilities Department</div>
+              <div class="feed-item feed-critical" role="listitem">CRITICAL: Your Voter Amit Bangar has issue related with Utilities Department</div>
+              <div class="feed-item feed-success" role="listitem">Health successfully Resolved your Voter Ira Patel's issue on January 01, 1970</div>
+              <div class="feed-item feed-success" role="listitem">Health successfully Resolved your Voter Pooja Rao's issue on January 01, 1970</div>
+            </div>
+          </article>
+        </section>
+
+        <section class="ticket-card table-panel panel war-room-table-panel" aria-label="Ground issue database">
+          <div class="ticket-card-header">
+            <div class="ticket-card-title"><span class="icon-circle"><i class="fa-solid fa-database"></i></span>Ground Issue Database</div>
+            <div class="ticket-card-eyebrow">Real-time synchronization</div>
+          </div>
+
+          <div class="table-toolbar">
+            <div class="toolbar-search-wrap">
+              <i class="fa-solid fa-magnifying-glass toolbar-search-icon"></i>
+              <input id="searchInput" class="toolbar-search-input" type="search" placeholder="Search Issues..." aria-label="Search issues" />
+            </div>
+
+            <select id="deptFilter" class="toolbar-select" aria-label="Filter by department">
+              <option value="">All Departments</option>
+              <option value="Utilities">Utilities</option>
+              <option value="Public Works">Public Works</option>
+              <option value="Energy">Energy</option>
+              <option value="Health">Health</option>
+              <option value="Municipal Corporation">Municipal Corporation</option>
+            </select>
+
+            <select id="statusFilter" class="toolbar-select" aria-label="Filter by status">
+              <option value="">All Statuses</option>
+              <option value="Open">Open</option>
+              <option value="Pending">Pending</option>
+              <option value="Closed">Closed</option>
+            </select>
+
+            <select id="severityFilter" class="toolbar-select" aria-label="Filter by severity">
+              <option value="">All Severities</option>
+              <option value="Critical">Critical</option>
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+
+            <button id="refreshTableBtn" class="toolbar-refresh-btn" type="button"><i class="fa-solid fa-arrows-rotate"></i> Reset Filters</button>
+          </div>
+
+          <div class="ticket-table-wrap" role="region" aria-label="Scrollable issue table">
+            <div class="ticket-table-scroll">
+              <table class="ticket-table">
+                <thead>
+                  <tr>
+                    <th class="col-id">TICKET ID</th>
+                    <th class="col-voter">VOTER ID</th>
+                    <th class="col-name">VOTER NAME</th>
+                    <th class="col-dept">DEPARTMENT <i class="fa-solid fa-chevron-down"></i></th>
+                    <th class="col-desc">ISSUE DESCRIPTION &amp; ADDRESS</th>
+                    <th class="col-status">STATUS <i class="fa-solid fa-chevron-down"></i></th>
+                    <th class="col-severity">SEVERITY <i class="fa-solid fa-chevron-down"></i></th>
+                    <th class="col-actions">ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/guard.js"></script>
+    <script src="../js/toast.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/charts.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/import.js"></script>
+    <script src="../js/sync.js"></script>
+    <script src="../js/issue-manager.js"></script>
+  </body>
+</html>

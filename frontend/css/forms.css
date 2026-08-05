@@ -1,0 +1,102 @@
+.form-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-error {
+  display: none;
+  color: #ff656b;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: var(--space-2);
+  padding: 6px 10px;
+  background: rgba(255, 90, 95, 0.12);
+  border: 1px solid rgba(255, 90, 95, 0.25);
+  border-radius: var(--radius-sm);
+}
+
+.issue-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.file-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--input-height);
+  padding: 0 var(--space-3) 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+  background: rgba(18, 24, 50, 0.92);
+}
+
+.file-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 84px;
+  min-height: 24px;
+  padding: 0 var(--space-2);
+  border-radius: 4px;
+  background: linear-gradient(180deg, #2fc2dd, #1ea3c9);
+  color: #dffbff;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.file-status {
+  font-size: 10px;
+  color: rgba(244, 247, 255, 0.72);
+}
+
+.file-help {
+  margin-top: var(--space-1);
+  font-size: 9px;
+  color: rgba(173, 179, 210, 0.55);
+}
+
+.issue-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.issue-clear {
+  min-width: 90px;
+  background: rgba(42, 46, 79, 0.92);
+  color: #d7d9ea;
+}
+
+.issue-submit {
+  min-width: 140px;
+  background: linear-gradient(180deg, #6d6ee8, #5a5ce1);
+}
+
+.issue-submit i {
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .issue-grid-two {
+    grid-template-columns: 1fr;
+  }
+}

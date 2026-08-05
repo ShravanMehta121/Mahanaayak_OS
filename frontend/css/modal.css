@@ -1,0 +1,214 @@
+/* Reusable Glassmorphic Modal System */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: rgba(9, 12, 39, 0.75);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-dialog {
+  width: min(92%, 840px);
+  max-height: 88vh;
+  background: linear-gradient(180deg, rgba(35, 40, 77, 0.98), rgba(26, 30, 60, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65), var(--glow-cyan);
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.94);
+  transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.modal-backdrop.open .modal-dialog {
+  transform: scale(1);
+}
+
+.modal-header {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.modal-title {
+  margin: 0;
+  font-size: var(--font-section);
+  font-weight: 800;
+  color: #f4f7ff;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(244, 247, 255, 0.8);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 90, 95, 0.25);
+  color: #ff7c7f;
+}
+
+.modal-body {
+  padding: var(--space-5);
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.modal-section-title {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.modal-card-box {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: rgba(18, 24, 50, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.modal-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.modal-grid-three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.modal-stat-num {
+  font-size: 24px;
+  font-weight: 800;
+  color: #f7b213;
+}
+
+.modal-stat-label {
+  font-size: var(--font-small);
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.modal-speech-box {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: rgba(24, 30, 61, 0.85);
+  border-left: 3px solid var(--purple);
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #f4f7ff;
+}
+
+.modal-footer {
+  padding: var(--space-3) var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.modal-dialog.modal-dialog-lg {
+  width: min(94%, 1050px);
+  max-height: 90vh;
+}
+
+/* Vertical Timeline Component */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 12px;
+  padding-left: 24px;
+  border-left: 2px solid rgba(47, 109, 243, 0.3);
+  gap: var(--space-4);
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -31px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--cyan);
+  border: 2px solid #14163e;
+  box-shadow: 0 0 8px var(--cyan);
+}
+
+.timeline-time {
+  font-size: 10px;
+  font-family: monospace;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.timeline-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f4f7ff;
+}
+
+.timeline-desc {
+  font-size: 12px;
+  color: rgba(244, 247, 255, 0.75);
+}
+
+.timeline-user {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-top: 2px;
+}
