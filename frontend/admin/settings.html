@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | Mahanaayak OS</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">MAIN</div>
+          <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room</span></a>
+          <a class="sidebar-link" href="./executive-brief.html"><span class="icon-circle"><i class="fa-solid fa-bolt"></i></span><span>AI Executive Brief</span></a>
+          
+          <div class="nav-section mt-4">MANAGEMENT</div>
+          <a class="sidebar-link" href="./team-members.html"><span class="icon-circle"><i class="fa-solid fa-users"></i></span><span>Team Management</span></a>
+          <a class="sidebar-link" href="./citizens.html"><span class="icon-circle"><i class="fa-solid fa-address-book"></i></span><span>Citizen Database</span></a>
+          
+          <div class="nav-section mt-4">INTELLIGENCE</div>
+          <a class="sidebar-link" href="./health-dashboard.html"><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span><span>Constituency Health</span></a>
+          <a class="sidebar-link" href="./ward-health.html"><span class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></span><span>Ward Intelligence</span></a>
+          <a class="sidebar-link" href="./ward-comparison.html"><span class="icon-circle"><i class="fa-solid fa-code-compare"></i></span><span>Ward Comparison</span></a>
+          
+          <div class="nav-section mt-4">OPERATIONS</div>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-bullhorn"></i></span><span>Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-building"></i></span><span>Departments</span></a>
+          <a class="sidebar-link" href="./reports.html"><span class="icon-circle"><i class="fa-solid fa-file-invoice"></i></span><span>Reports Center</span></a>
+          
+          <div class="nav-section mt-4">SYSTEM</div>
+          <a class="sidebar-link" href="./activity-logs.html"><span class="icon-circle"><i class="fa-solid fa-list-check"></i></span><span>Activity Logs</span></a>
+          <a class="sidebar-link" href="./system-monitoring.html"><span class="icon-circle"><i class="fa-solid fa-server"></i></span><span>System Monitoring</span></a>
+          <a class="sidebar-link active" href="./settings.html"><span class="icon-circle"><i class="fa-solid fa-gear"></i></span><span>Settings</span></a>
+        </nav>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Settings</h1>
+            <div class="page-header-subtitle">System configuration and preferences</div>
+          </div>
+          <div class="page-header-actions header-kpis">
+             <button class="icon-btn" aria-label="Global Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+             <button class="icon-btn"><i class="fa-solid fa-bell"></i><span class="notification-badge">3</span></button>
+          </div>
+        </header>
+
+        <section class="page-grid grid-two-wide">
+           <div class="panel p-0 overflow-hidden">
+              <div class="flex border-b-soft" style="background: var(--bg-1);">
+                 <button class="tab-btn active px-4 py-3 font-small text-cyan border-b-2" style="border-bottom-color: var(--cyan); background: transparent;">AI Settings</button>
+                 <button class="tab-btn px-4 py-3 font-small text-sub border-b-2 border-transparent" style="background: transparent;">Departments</button>
+                 <button class="tab-btn px-4 py-3 font-small text-sub border-b-2 border-transparent" style="background: transparent;">Roles</button>
+                 <button class="tab-btn px-4 py-3 font-small text-sub border-b-2 border-transparent" style="background: transparent;">System</button>
+              </div>
+              <div class="p-4">
+                 <h3 class="font-section mt-0 mb-4 text-0">AI Intelligence Configuration</h3>
+                 
+                 <div class="mb-4">
+                    <label class="d-block font-label text-sub uppercase mb-2">Automated Triage</label>
+                    <div class="flex-between bg-surface-2 p-3 rounded-sm border-soft">
+                       <div>
+                          <strong class="d-block font-small text-0">Enable AI Auto-Assignment</strong>
+                          <span class="font-small text-sub">Automatically assign incoming complaints to departments based on NLP.</span>
+                       </div>
+                       <label class="switch">
+                         <input type="checkbox" checked>
+                         <span class="slider round"></span>
+                       </label>
+                    </div>
+                 </div>
+
+                 <div class="mb-4">
+                    <label class="d-block font-label text-sub uppercase mb-2">Duplicate Detection</label>
+                    <div class="flex-between bg-surface-2 p-3 rounded-sm border-soft">
+                       <div>
+                          <strong class="d-block font-small text-0">Similarity Threshold</strong>
+                          <span class="font-small text-sub">Trigger duplicate warning if match confidence is above this %.</span>
+                       </div>
+                       <select class="toolbar-select"><option>75%</option><option selected>85%</option><option>95%</option></select>
+                    </div>
+                 </div>
+
+                 <div class="mb-4">
+                    <label class="d-block font-label text-sub uppercase mb-2">Sentiment Analysis Engine</label>
+                    <select class="form-input w-100">
+                       <option>Gemini 1.5 Pro</option>
+                       <option>GPT-4o</option>
+                       <option>Local LLaMA 3 8B (Faster, Less Accurate)</option>
+                    </select>
+                 </div>
+
+                 <div class="mt-4 pt-4 border-t-soft text-right">
+                    <button class="action-button button-blue px-4">Save Changes</button>
+                 </div>
+              </div>
+           </div>
+           
+           <div class="panel">
+              <div class="panel-header mb-3"><div class="chart-title">Profile Settings</div></div>
+              <div class="flex-center flex-column mb-4 pt-2">
+                 <div class="avatar bg-purple text-title mb-3" style="width: 80px; height: 80px; font-size: 32px;">A</div>
+                 <h3 class="mt-0 mb-1 font-section text-0">Amit Bangar</h3>
+                 <span class="font-small text-sub">System Administrator</span>
+              </div>
+              
+              <div class="mb-3">
+                 <label class="d-block font-label text-sub uppercase mb-1">Email Address</label>
+                 <input type="text" class="form-input w-100" value="admin@mahanaayakos.com" disabled>
+              </div>
+              
+              <div class="mb-3">
+                 <label class="d-block font-label text-sub uppercase mb-1">Phone Number</label>
+                 <input type="text" class="form-input w-100" value="+91 9876543210">
+              </div>
+
+              <div class="mt-4">
+                 <button class="action-button button-outline w-100 mb-2">Change Password</button>
+                 <button class="action-button button-outline w-100 text-red border-red-soft hover-bg-red-soft" style="border-color: rgba(255, 90, 95, 0.3); color: var(--red);">Sign Out of All Devices</button>
+              </div>
+           </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

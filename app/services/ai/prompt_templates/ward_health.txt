@@ -1,0 +1,7 @@
+Analyze the health of Ward: {{ ward_name }} based on its complaints data.
+Context: {{ context }}
+
+Return:
+- Score (0-100)
+- Grade (A, B, C, D, F)
+- Explanation

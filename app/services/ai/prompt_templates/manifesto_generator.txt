@@ -1,0 +1,10 @@
+Draft a political manifesto based on current civic issues and public sentiment.
+Context: {{ context }}
+
+Focus areas:
+- Roads
+- Water
+- Electricity
+- Education
+- Women Safety
+- Healthcare

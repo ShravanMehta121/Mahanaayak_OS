@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constituency Health | Mahanaayak OS</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">MAIN</div>
+          <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room</span></a>
+          <a class="sidebar-link" href="./executive-brief.html"><span class="icon-circle"><i class="fa-solid fa-bolt"></i></span><span>AI Executive Brief</span></a>
+          
+          <div class="nav-section mt-4">MANAGEMENT</div>
+          <a class="sidebar-link" href="./team-members.html"><span class="icon-circle"><i class="fa-solid fa-users"></i></span><span>Team Management</span></a>
+          <a class="sidebar-link" href="./citizens.html"><span class="icon-circle"><i class="fa-solid fa-address-book"></i></span><span>Citizen Database</span></a>
+          
+          <div class="nav-section mt-4">INTELLIGENCE</div>
+          <a class="sidebar-link active" href="./health-dashboard.html"><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span><span>Constituency Health</span></a>
+          <a class="sidebar-link" href="./ward-health.html"><span class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></span><span>Ward Intelligence</span></a>
+          <a class="sidebar-link" href="./ward-comparison.html"><span class="icon-circle"><i class="fa-solid fa-code-compare"></i></span><span>Ward Comparison</span></a>
+          
+          <div class="nav-section mt-4">OPERATIONS</div>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-bullhorn"></i></span><span>Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-building"></i></span><span>Departments</span></a>
+          <a class="sidebar-link" href="./reports.html"><span class="icon-circle"><i class="fa-solid fa-file-invoice"></i></span><span>Reports Center</span></a>
+          
+          <div class="nav-section mt-4">SYSTEM</div>
+          <a class="sidebar-link" href="./activity-logs.html"><span class="icon-circle"><i class="fa-solid fa-list-check"></i></span><span>Activity Logs</span></a>
+          <a class="sidebar-link" href="./system-monitoring.html"><span class="icon-circle"><i class="fa-solid fa-server"></i></span><span>System Monitoring</span></a>
+          <a class="sidebar-link" href="./settings.html"><span class="icon-circle"><i class="fa-solid fa-gear"></i></span><span>Settings</span></a>
+        </nav>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Constituency Health</h1>
+            <div class="page-header-subtitle">Overall performance and macro indicators</div>
+          </div>
+          <div class="page-header-actions header-kpis">
+             <button class="icon-btn" aria-label="Global Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+             <button class="icon-btn"><i class="fa-solid fa-bell"></i><span class="notification-badge">3</span></button>
+          </div>
+        </header>
+
+        <section class="page-grid grid-4 mb-4">
+          <div class="panel kpi-card p-4 border-cyan ai-gradient-bg text-center">
+            <div class="kpi-label text-cyan font-label uppercase mb-2">Overall Health Score</div>
+            <div class="kpi-val text-title font-bold text-0" style="font-size: 42px;">78.4 <span class="text-sub font-section">/ 100</span></div>
+            <div class="text-sub font-small mt-2"><i class="fa-solid fa-arrow-up text-success"></i> 1.2% from last month</div>
+          </div>
+          <div class="panel kpi-card p-3 flex flex-column justify-center border-soft">
+            <div class="kpi-label text-sub font-label uppercase mb-1">Critical Wards</div>
+            <div class="kpi-val text-red font-title font-bold">3</div>
+            <div class="text-sub font-small mt-1">Requiring immediate attention</div>
+          </div>
+          <div class="panel kpi-card p-3 flex flex-column justify-center border-soft">
+            <div class="kpi-label text-sub font-label uppercase mb-1">Dept Efficiency</div>
+            <div class="kpi-val text-green font-title font-bold">82%</div>
+            <div class="text-sub font-small mt-1">Average SLA adherence</div>
+          </div>
+          <div class="panel kpi-card p-3 flex flex-column justify-center border-soft">
+            <div class="kpi-label text-sub font-label uppercase mb-1">Complaint Growth</div>
+            <div class="kpi-val text-amber font-title font-bold">-4.5%</div>
+            <div class="text-sub font-small mt-1">MoM reduction in issues</div>
+          </div>
+        </section>
+
+        <section class="page-grid grid-3">
+           <div class="panel skeleton-card" style="height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-2);">
+              <i class="fa-solid fa-chart-line text-title"></i> &nbsp; Loading Chart Data...
+           </div>
+           <div class="panel skeleton-card" style="height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-2);">
+              <i class="fa-solid fa-chart-bar text-title"></i> &nbsp; Loading Chart Data...
+           </div>
+           <div class="panel skeleton-card" style="height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-2);">
+              <i class="fa-solid fa-chart-pie text-title"></i> &nbsp; Loading Chart Data...
+           </div>
+        </section>
+        
+        <section class="panel table-panel mt-4">
+          <div class="panel-header mb-3"><div class="chart-title">Sector Health Breakdown</div></div>
+          <div class="ticket-table-wrap">
+            <table class="ticket-table">
+              <thead>
+                <tr>
+                  <th>SECTOR</th>
+                  <th>HEALTH SCORE</th>
+                  <th>OPEN ISSUES</th>
+                  <th>AVG RESOLUTION TIME</th>
+                  <th>TREND</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong><i class="fa-solid fa-road text-sub mr-2"></i> Roads & Infrastructure</strong></td>
+                  <td><div class="progress-bar-container w-100 bg-surface-2 rounded-full h-2 mb-1"><div class="progress-bar bg-amber rounded-full h-100" style="width: 65%;"></div></div><span class="font-small text-amber">65% (Needs Attention)</span></td>
+                  <td>450</td>
+                  <td>14 Days</td>
+                  <td><i class="fa-solid fa-arrow-down text-red"></i> -2%</td>
+                </tr>
+                <tr>
+                  <td><strong><i class="fa-solid fa-droplet text-sub mr-2"></i> Water Supply</strong></td>
+                  <td><div class="progress-bar-container w-100 bg-surface-2 rounded-full h-2 mb-1"><div class="progress-bar bg-cyan rounded-full h-100" style="width: 82%;"></div></div><span class="font-small text-cyan">82% (Good)</span></td>
+                  <td>120</td>
+                  <td>2 Days</td>
+                  <td><i class="fa-solid fa-arrow-up text-success"></i> +5%</td>
+                </tr>
+                <tr>
+                  <td><strong><i class="fa-solid fa-bolt text-sub mr-2"></i> Electricity</strong></td>
+                  <td><div class="progress-bar-container w-100 bg-surface-2 rounded-full h-2 mb-1"><div class="progress-bar bg-green rounded-full h-100" style="width: 95%;"></div></div><span class="font-small text-green">95% (Excellent)</span></td>
+                  <td>30</td>
+                  <td>4 Hours</td>
+                  <td><i class="fa-solid fa-minus text-sub"></i> 0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

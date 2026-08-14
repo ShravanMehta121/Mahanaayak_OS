@@ -1,0 +1,8 @@
+Analyze the following complaint and provide a structured summary.
+Description: {{ description }}
+
+Output requirements:
+- Summary
+- Suggested Department
+- Suggested Severity
+- Suggested Resolution Steps

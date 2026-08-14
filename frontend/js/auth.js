@@ -1,77 +1,58 @@
-/**
- * MAHANAYAK OS — Modular Authentication Service
- * Serves as a mock authentication layer that can be easily replaced by backend API endpoints.
- */
-
 const AUTH_STORAGE_KEY = 'mahanayakAuth';
 
-const DEMO_ACCOUNTS = {
-  admin: {
-    password: 'admin123',
-    role: 'admin',
-    redirectUrl: 'admin/war-room.html'
-  },
-  office: {
-    password: 'office123',
-    role: 'office',
-    redirectUrl: 'user/dashboard.html'
-  }
-};
-
 const AuthService = {
-  /**
-   * Authenticates user against demo credentials with a 300ms simulated network delay.
-   * @param {string} username 
-   * @param {string} password 
-   * @returns {Promise<{success: boolean, user?: object, redirectUrl?: string, message?: string}>}
-   */
-  login(username, password) {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        const cleanUser = (username || '').trim();
-        const cleanPass = (password || '').trim();
+  async login(username, password) {
+    try {
+      // Use the global api.js client
+      const response = await window.api.request('/auth/login', {
+        method: 'POST',
+        body: JSON.stringify({ username, password })
+      });
 
-        const account = DEMO_ACCOUNTS[cleanUser];
+      if (response && response.status === 'success') {
+        const user = response.data.user;
+        const role = user.role.toLowerCase();
+        
+        // Ensure role is mapped for existing frontend logic if needed
+        const mappedRole = role === 'admin' ? 'admin' : 'office';
+        const redirectUrl = mappedRole === 'admin' ? 'admin/war-room.html' : 'user/dashboard.html';
 
-        if (account && account.password === cleanPass) {
-          const userSession = {
-            username: cleanUser,
-            role: account.role,
-            loggedIn: true,
-            loginTimestamp: new Date().toISOString()
-          };
+        const userSession = {
+          username: user.username,
+          role: mappedRole,
+          loggedIn: true,
+          loginTimestamp: new Date().toISOString()
+        };
 
-          sessionStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(userSession));
+        sessionStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(userSession));
 
-          resolve({
-            success: true,
-            user: userSession,
-            redirectUrl: account.redirectUrl
-          });
-        } else {
-          resolve({
-            success: false,
-            message: 'Invalid username or password.'
-          });
-        }
-      }, 300);
-    });
+        return {
+          success: true,
+          user: userSession,
+          redirectUrl: redirectUrl
+        };
+      }
+    } catch (error) {
+      return {
+        success: false,
+        message: error.message || 'Invalid username or password.'
+      };
+    }
   },
 
-  /**
-   * Clears session storage and redirects user to login.html
-   */
-  logout() {
+  async logout() {
+    try {
+      await window.api.request('/auth/logout', { method: 'POST' });
+    } catch (e) {
+      console.warn("Logout request failed, proceeding to clear session");
+    }
+    
     sessionStorage.removeItem(AUTH_STORAGE_KEY);
     const isSubdir = window.location.pathname.includes('/user/') || window.location.pathname.includes('/admin/');
-    const loginPath = isSubdir ? '../login.html' : './login.html';
+    const loginPath = isSubdir ? '../' : './';
     window.location.href = loginPath;
   },
 
-  /**
-   * Retrieves currently logged in user object or null.
-   * @returns {{username: string, role: string, loggedIn: boolean}|null}
-   */
   getCurrentUser() {
     try {
       const data = sessionStorage.getItem(AUTH_STORAGE_KEY);
@@ -83,20 +64,11 @@ const AuthService = {
     }
   },
 
-  /**
-   * Returns true if user is logged in.
-   * @returns {boolean}
-   */
   isAuthenticated() {
     const user = this.getCurrentUser();
     return Boolean(user && user.loggedIn);
   },
 
-  /**
-   * Checks if active user has the specified role.
-   * @param {string} role 
-   * @returns {boolean}
-   */
   hasRole(role) {
     const user = this.getCurrentUser();
     return Boolean(user && user.role === role);

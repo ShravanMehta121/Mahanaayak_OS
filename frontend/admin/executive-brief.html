@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Executive Brief | Mahanaayak OS</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">MAIN</div>
+          <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room</span></a>
+          <a class="sidebar-link active" href="./executive-brief.html"><span class="icon-circle"><i class="fa-solid fa-bolt"></i></span><span>AI Executive Brief</span></a>
+          
+          <div class="nav-section mt-4">MANAGEMENT</div>
+          <a class="sidebar-link" href="./team-members.html"><span class="icon-circle"><i class="fa-solid fa-users"></i></span><span>Team Management</span></a>
+          <a class="sidebar-link" href="./citizens.html"><span class="icon-circle"><i class="fa-solid fa-address-book"></i></span><span>Citizen Database</span></a>
+          
+          <div class="nav-section mt-4">INTELLIGENCE</div>
+          <a class="sidebar-link" href="./health-dashboard.html"><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span><span>Constituency Health</span></a>
+          <a class="sidebar-link" href="./ward-health.html"><span class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></span><span>Ward Intelligence</span></a>
+          <a class="sidebar-link" href="./ward-comparison.html"><span class="icon-circle"><i class="fa-solid fa-code-compare"></i></span><span>Ward Comparison</span></a>
+          
+          <div class="nav-section mt-4">OPERATIONS</div>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-bullhorn"></i></span><span>Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-building"></i></span><span>Departments</span></a>
+          <a class="sidebar-link" href="./reports.html"><span class="icon-circle"><i class="fa-solid fa-file-invoice"></i></span><span>Reports Center</span></a>
+          
+          <div class="nav-section mt-4">SYSTEM</div>
+          <a class="sidebar-link" href="./activity-logs.html"><span class="icon-circle"><i class="fa-solid fa-list-check"></i></span><span>Activity Logs</span></a>
+          <a class="sidebar-link" href="./system-monitoring.html"><span class="icon-circle"><i class="fa-solid fa-server"></i></span><span>System Monitoring</span></a>
+          <a class="sidebar-link" href="./settings.html"><span class="icon-circle"><i class="fa-solid fa-gear"></i></span><span>Settings</span></a>
+        </nav>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <div class="page-header-subtitle">Date: 07 Aug 2026 &nbsp;|&nbsp; Morning Brief</div>
+            <h1 class="page-header-title">Executive Intelligence Brief</h1>
+          </div>
+          <div class="page-header-actions header-kpis">
+             <button class="icon-btn" aria-label="Global Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+             <button class="icon-btn"><i class="fa-solid fa-bell"></i><span class="notification-badge">3</span></button>
+          </div>
+        </header>
+
+        <section class="page-grid grid-two-wide mb-4">
+          <!-- Left: AI Summary -->
+          <div class="panel ai-brief-panel bg-surface-1 border-purple">
+             <div class="panel-header mb-3">
+                <div class="chart-title"><i class="fa-solid fa-sparkles text-purple"></i> Daily Synthesis</div>
+             </div>
+             <p class="font-section text-0 line-height-1-5">
+                Good Morning. Over the last 24 hours, constituency health has declined by <strong class="text-red">2.4%</strong> due to a spike in water-related issues in Ward 12. 
+                Public Works resolved 45 issues yesterday, but 12 critical SLA breaches remain. 
+                <br><br>
+                <strong class="text-cyan">Recommendation:</strong> Prioritize an inspection visit to Kothrud today to address constituent unrest.
+             </p>
+             <div class="flex gap-3 mt-4">
+                <button class="action-button button-purple"><i class="fa-solid fa-calendar-check"></i> Auto-Schedule Ward Visit</button>
+                <button class="action-button button-outline"><i class="fa-solid fa-file-pdf"></i> Download PDF Brief</button>
+             </div>
+          </div>
+          
+          <!-- Right: Critical KPIs -->
+          <div class="grid-2 gap-3">
+             <div class="panel kpi-card bg-surface-1 border-soft flex-column-center p-3">
+               <div class="kpi-icon text-red text-section mb-2"><i class="fa-solid fa-fire"></i></div>
+               <div class="kpi-content">
+                 <div class="kpi-label font-label text-sub uppercase">New Critical Issues</div>
+                 <div class="kpi-val text-red font-title font-bold">24</div>
+                 <div class="text-sub font-label mt-1"><i class="fa-solid fa-arrow-up"></i> 12% vs yesterday</div>
+               </div>
+             </div>
+             <div class="panel kpi-card bg-surface-1 border-soft flex-column-center p-3">
+               <div class="kpi-icon text-amber text-section mb-2"><i class="fa-solid fa-clock"></i></div>
+               <div class="kpi-content">
+                 <div class="kpi-label font-label text-sub uppercase">SLA Breaches</div>
+                 <div class="kpi-val text-amber font-title font-bold">12</div>
+                 <div class="text-sub font-label mt-1">Pending > 48hrs</div>
+               </div>
+             </div>
+             <div class="panel kpi-card bg-surface-1 border-soft flex-column-center p-3">
+               <div class="kpi-icon text-green text-section mb-2"><i class="fa-solid fa-check-double"></i></div>
+               <div class="kpi-content">
+                 <div class="kpi-label font-label text-sub uppercase">Issues Resolved</div>
+                 <div class="kpi-val text-green font-title font-bold">145</div>
+                 <div class="text-sub font-label mt-1">Last 24 hours</div>
+               </div>
+             </div>
+             <div class="panel kpi-card bg-surface-1 border-soft flex-column-center p-3">
+               <div class="kpi-icon text-blue text-section mb-2"><i class="fa-solid fa-face-smile"></i></div>
+               <div class="kpi-content">
+                 <div class="kpi-label font-label text-sub uppercase">Public Sentiment</div>
+                 <div class="kpi-val text-blue font-title font-bold">54%</div>
+                 <div class="text-sub font-label mt-1">Neutral / Positive</div>
+               </div>
+             </div>
+          </div>
+        </section>
+        
+        <section class="page-grid grid-2">
+           <div class="panel">
+              <div class="panel-header"><div class="chart-title">AI Resource Allocation Suggestions</div></div>
+              <ul class="suggestion-list mt-3 p-0 list-none">
+                 <li class="p-3 mb-3 bg-surface-2 rounded-sm border-soft flex-between">
+                    <div>
+                       <strong class="text-0 font-body">Shift 2 garbage trucks to Ward 4</strong>
+                       <p class="mt-1 font-small text-sub">Predicted spike in waste volume due to festival.</p>
+                    </div>
+                    <button class="action-button small-button button-blue">Approve</button>
+                 </li>
+                 <li class="p-3 mb-3 bg-surface-2 rounded-sm border-soft flex-between">
+                    <div>
+                       <strong class="text-0 font-body">Deploy extra field officers to Ward 12</strong>
+                       <p class="mt-1 font-small text-sub">Water logging SLA breaches are accumulating.</p>
+                    </div>
+                    <button class="action-button small-button button-blue">Approve</button>
+                 </li>
+              </ul>
+           </div>
+           <div class="panel">
+              <div class="panel-header"><div class="chart-title">Priority Schedule / Suggested Visits</div></div>
+              <ul class="suggestion-list mt-3 p-0 list-none">
+                 <li class="p-3 mb-3 bg-surface-2 rounded-sm border-soft flex gap-3 align-start">
+                    <div class="time-block text-center p-2 bg-surface-3 rounded-sm min-w-80">
+                       <strong class="d-block text-cyan font-small">10:00 AM</strong>
+                    </div>
+                    <div>
+                       <strong class="text-0 font-body">Visit Kothrud Main Street</strong>
+                       <p class="mt-1 font-small text-sub">Address ongoing water logging complaints. High visibility area.</p>
+                    </div>
+                 </li>
+                 <li class="p-3 mb-3 bg-surface-2 rounded-sm border-soft flex gap-3 align-start">
+                    <div class="time-block text-center p-2 bg-surface-3 rounded-sm min-w-80">
+                       <strong class="d-block text-cyan font-small">02:00 PM</strong>
+                    </div>
+                    <div>
+                       <strong class="text-0 font-body">Review meeting with Public Works Dept</strong>
+                       <p class="mt-1 font-small text-sub">Address 12 SLA breaches in road repairs.</p>
+                    </div>
+                 </li>
+              </ul>
+           </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

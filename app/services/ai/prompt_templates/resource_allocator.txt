@@ -1,0 +1,8 @@
+Recommend resource allocation for the following wards and complaints.
+Context: {{ context }}
+
+Recommend allocation for:
+- Engineers
+- Cleaning Teams
+- Water Tankers
+- Budget

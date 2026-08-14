@@ -1,0 +1,4 @@
+Perform sentiment analysis on the following text or complaint descriptions.
+Text: {{ text }}
+
+Classify into Positive, Neutral, or Negative with a brief explanation.

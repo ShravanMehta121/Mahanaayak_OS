@@ -1,0 +1,9 @@
+Generate a campaign plan for the upcoming period based on current issues.
+Context: {{ context }}
+
+Generate suggestions for:
+- Meetings
+- Road Shows
+- Medical Camps
+- Public Visits
+- Water Surveys

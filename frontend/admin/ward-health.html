@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ward Intelligence | Mahanaayak OS</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">MAIN</div>
+          <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room</span></a>
+          <a class="sidebar-link" href="./executive-brief.html"><span class="icon-circle"><i class="fa-solid fa-bolt"></i></span><span>AI Executive Brief</span></a>
+          
+          <div class="nav-section mt-4">MANAGEMENT</div>
+          <a class="sidebar-link" href="./team-members.html"><span class="icon-circle"><i class="fa-solid fa-users"></i></span><span>Team Management</span></a>
+          <a class="sidebar-link" href="./citizens.html"><span class="icon-circle"><i class="fa-solid fa-address-book"></i></span><span>Citizen Database</span></a>
+          
+          <div class="nav-section mt-4">INTELLIGENCE</div>
+          <a class="sidebar-link" href="./health-dashboard.html"><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span><span>Constituency Health</span></a>
+          <a class="sidebar-link active" href="./ward-health.html"><span class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></span><span>Ward Intelligence</span></a>
+          <a class="sidebar-link" href="./ward-comparison.html"><span class="icon-circle"><i class="fa-solid fa-code-compare"></i></span><span>Ward Comparison</span></a>
+          
+          <div class="nav-section mt-4">OPERATIONS</div>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-bullhorn"></i></span><span>Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-building"></i></span><span>Departments</span></a>
+          <a class="sidebar-link" href="./reports.html"><span class="icon-circle"><i class="fa-solid fa-file-invoice"></i></span><span>Reports Center</span></a>
+          
+          <div class="nav-section mt-4">SYSTEM</div>
+          <a class="sidebar-link" href="./activity-logs.html"><span class="icon-circle"><i class="fa-solid fa-list-check"></i></span><span>Activity Logs</span></a>
+          <a class="sidebar-link" href="./system-monitoring.html"><span class="icon-circle"><i class="fa-solid fa-server"></i></span><span>System Monitoring</span></a>
+          <a class="sidebar-link" href="./settings.html"><span class="icon-circle"><i class="fa-solid fa-gear"></i></span><span>Settings</span></a>
+        </nav>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Ward Intelligence</h1>
+            <div class="page-header-subtitle">Micro-level analytics by ward</div>
+          </div>
+          <div class="page-header-actions header-kpis">
+             <button class="icon-btn" aria-label="Global Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+             <button class="icon-btn"><i class="fa-solid fa-bell"></i><span class="notification-badge">3</span></button>
+          </div>
+        </header>
+
+        <div class="table-toolbar mb-4">
+           <div class="toolbar-search-wrap" style="max-width: 400px; width: 100%;">
+             <i class="fa-solid fa-magnifying-glass toolbar-search-icon"></i>
+             <input type="search" class="toolbar-search-input" placeholder="Search specific ward...">
+           </div>
+           <select class="toolbar-select"><option>Sort by Health: Low to High</option><option>Sort by Health: High to Low</option><option>Sort by Complaints</option></select>
+        </div>
+
+        <section class="page-grid grid-4">
+           <div class="panel border-soft cursor-pointer hover-border-cyan transition-all">
+              <div class="flex-between mb-3">
+                 <h3 class="font-section mt-0 mb-0">Ward 12 (Kothrud)</h3>
+                 <span class="status-chip chip-critical border-none">Critical</span>
+              </div>
+              <div class="flex align-end gap-2 mb-3">
+                 <div class="text-title font-bold text-red" style="font-size: 32px;">42.5</div>
+                 <div class="text-sub font-small mb-1">Health Score</div>
+              </div>
+              <div class="flex-between font-small text-sub border-t-soft pt-2">
+                 <span>Open Issues: <strong class="text-0">145</strong></span>
+                 <span>SLA Breaches: <strong class="text-red">24</strong></span>
+              </div>
+           </div>
+           
+           <div class="panel border-soft cursor-pointer hover-border-cyan transition-all">
+              <div class="flex-between mb-3">
+                 <h3 class="font-section mt-0 mb-0">Ward 4 (Shivaji Nagar)</h3>
+                 <span class="status-chip chip-warning border-none">Needs Attn</span>
+              </div>
+              <div class="flex align-end gap-2 mb-3">
+                 <div class="text-title font-bold text-amber" style="font-size: 32px;">68.2</div>
+                 <div class="text-sub font-small mb-1">Health Score</div>
+              </div>
+              <div class="flex-between font-small text-sub border-t-soft pt-2">
+                 <span>Open Issues: <strong class="text-0">82</strong></span>
+                 <span>SLA Breaches: <strong class="text-amber">12</strong></span>
+              </div>
+           </div>
+           
+           <div class="panel border-soft cursor-pointer hover-border-cyan transition-all">
+              <div class="flex-between mb-3">
+                 <h3 class="font-section mt-0 mb-0">Ward 1 (Aundh)</h3>
+                 <span class="status-chip chip-success border-none">Excellent</span>
+              </div>
+              <div class="flex align-end gap-2 mb-3">
+                 <div class="text-title font-bold text-green" style="font-size: 32px;">92.4</div>
+                 <div class="text-sub font-small mb-1">Health Score</div>
+              </div>
+              <div class="flex-between font-small text-sub border-t-soft pt-2">
+                 <span>Open Issues: <strong class="text-0">21</strong></span>
+                 <span>SLA Breaches: <strong class="text-green">0</strong></span>
+              </div>
+           </div>
+           
+           <div class="panel border-soft cursor-pointer hover-border-cyan transition-all">
+              <div class="flex-between mb-3">
+                 <h3 class="font-section mt-0 mb-0">Ward 8 (Baner)</h3>
+                 <span class="status-chip chip-success border-none">Excellent</span>
+              </div>
+              <div class="flex align-end gap-2 mb-3">
+                 <div class="text-title font-bold text-green" style="font-size: 32px;">88.9</div>
+                 <div class="text-sub font-small mb-1">Health Score</div>
+              </div>
+              <div class="flex-between font-small text-sub border-t-soft pt-2">
+                 <span>Open Issues: <strong class="text-0">34</strong></span>
+                 <span>SLA Breaches: <strong class="text-green">2</strong></span>
+              </div>
+           </div>
+        </section>
+
+        <section class="page-grid grid-two-wide mt-4">
+           <div class="panel">
+              <div class="panel-header mb-3"><div class="chart-title">Ward 12 - Issue Distribution</div></div>
+              <div class="skeleton-img h-100" style="min-height: 300px;"></div>
+           </div>
+           <div class="panel">
+              <div class="panel-header mb-3"><div class="chart-title">Ward 12 - Department Performance</div></div>
+              <div class="skeleton-img h-100" style="min-height: 300px;"></div>
+           </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

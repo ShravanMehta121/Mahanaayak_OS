@@ -1,0 +1,6 @@
+Generate an executive summary based on the following context.
+Timeframe: {{ timeframe }}
+
+Output should include:
+- Summary of the period
+- Key metrics and highlights

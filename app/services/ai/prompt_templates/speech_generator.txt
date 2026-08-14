@@ -1,0 +1,5 @@
+Generate a speech or statement.
+Type: {{ type }}
+Topic: {{ topic }}
+
+Output format depends on type (Rally Speech, Public Speech, Press Note, or Social Media Caption).

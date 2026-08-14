@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Management | Mahanaayak OS</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">MAIN</div>
+          <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room</span></a>
+          <a class="sidebar-link" href="./executive-brief.html"><span class="icon-circle"><i class="fa-solid fa-bolt"></i></span><span>AI Executive Brief</span></a>
+          
+          <div class="nav-section mt-4">MANAGEMENT</div>
+          <a class="sidebar-link active" href="./team-members.html"><span class="icon-circle"><i class="fa-solid fa-users"></i></span><span>Team Management</span></a>
+          <a class="sidebar-link" href="./citizens.html"><span class="icon-circle"><i class="fa-solid fa-address-book"></i></span><span>Citizen Database</span></a>
+          
+          <div class="nav-section mt-4">INTELLIGENCE</div>
+          <a class="sidebar-link" href="./health-dashboard.html"><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span><span>Constituency Health</span></a>
+          <a class="sidebar-link" href="./ward-health.html"><span class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></span><span>Ward Intelligence</span></a>
+          <a class="sidebar-link" href="./ward-comparison.html"><span class="icon-circle"><i class="fa-solid fa-code-compare"></i></span><span>Ward Comparison</span></a>
+          
+          <div class="nav-section mt-4">OPERATIONS</div>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-bullhorn"></i></span><span>Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-building"></i></span><span>Departments</span></a>
+          <a class="sidebar-link" href="./reports.html"><span class="icon-circle"><i class="fa-solid fa-file-invoice"></i></span><span>Reports Center</span></a>
+          
+          <div class="nav-section mt-4">SYSTEM</div>
+          <a class="sidebar-link" href="./activity-logs.html"><span class="icon-circle"><i class="fa-solid fa-list-check"></i></span><span>Activity Logs</span></a>
+          <a class="sidebar-link" href="./system-monitoring.html"><span class="icon-circle"><i class="fa-solid fa-server"></i></span><span>System Monitoring</span></a>
+          <a class="sidebar-link" href="./settings.html"><span class="icon-circle"><i class="fa-solid fa-gear"></i></span><span>Settings</span></a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+
+        <div class="sidebar-footer">
+          <a class="sidebar-link logout" href="#"><span class="icon-circle"><i class="fa-solid fa-arrow-right-from-bracket"></i></span><span>Logout</span></a>
+        </div>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Team Management</h1>
+            <div class="page-header-subtitle">Pune Constituency Intelligence</div>
+          </div>
+
+          <div class="page-header-actions header-kpis">
+            <button class="icon-btn search-trigger" aria-label="Global Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="icon-btn notification-trigger" aria-label="Notifications">
+              <i class="fa-solid fa-bell"></i>
+              <span class="notification-badge">3</span>
+            </button>
+            <div class="header-kpi war-room-kpi">
+              <span class="header-kpi-label">Win Probability</span>
+              <div class="header-kpi-value"><i class="fa-solid fa-arrow-trend-up"></i>65%</div>
+            </div>
+          </div>
+        </header>
+        
+        <section class="page-intro">
+          <div>
+            <h2 class="page-intro-title">Team Roster</h2>
+            <div class="page-intro-copy">Manage field officers, ward executives, and support staff.</div>
+          </div>
+          <div class="page-intro-actions flex gap-2">
+            <a href="team-member-add.html" class="action-button button-blue"><i class="fa-solid fa-plus"></i> Add Member</a>
+          </div>
+        </section>
+        
+        <section class="panel table-panel">
+          <div class="table-toolbar">
+            <div class="toolbar-search-wrap">
+              <i class="fa-solid fa-magnifying-glass toolbar-search-icon"></i>
+              <input type="search" class="toolbar-search-input" placeholder="Search members...">
+            </div>
+            <select class="toolbar-select"><option>All Wards</option><option>Ward 1</option></select>
+            <select class="toolbar-select"><option>All Roles</option><option>Field Officer</option></select>
+            <select class="toolbar-select"><option>Active</option><option>Inactive</option></select>
+          </div>
+          
+          <div class="ticket-table-wrap">
+            <table class="ticket-table">
+              <thead>
+                <tr>
+                  <th>NAME & CONTACT</th>
+                  <th>ROLE</th>
+                  <th>ASSIGNED WARD</th>
+                  <th>ISSUES RESOLVED</th>
+                  <th>PERFORMANCE</th>
+                  <th>STATUS</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <div class="avatar bg-blue">R</div>
+                      <div>
+                        <strong>Ramesh Kumar</strong>
+                        <div class="text-sub">+91 9876543210</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Field Officer</td>
+                  <td>Ward 12, Kothrud</td>
+                  <td>145 / 160</td>
+                  <td><span class="text-success">92%</span> Excellent</td>
+                  <td><span class="status-chip chip-success">Active</span></td>
+                  <td>
+                    <a href="team-member-details.html" class="icon-btn text-sub"><i class="fa-solid fa-eye"></i></a>
+                    <a href="team-member-edit.html" class="icon-btn text-sub ml-2"><i class="fa-solid fa-pen"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="user-cell">
+                      <div class="avatar bg-purple">A</div>
+                      <div>
+                        <strong>Anita Sharma</strong>
+                        <div class="text-sub">+91 9123456789</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>Coordinator</td>
+                  <td>Ward 4, Shivaji Nagar</td>
+                  <td>89 / 120</td>
+                  <td><span class="text-warning">74%</span> Good</td>
+                  <td><span class="status-chip chip-success">Active</span></td>
+                  <td>
+                    <a href="team-member-details.html" class="icon-btn text-sub"><i class="fa-solid fa-eye"></i></a>
+                    <a href="team-member-edit.html" class="icon-btn text-sub ml-2"><i class="fa-solid fa-pen"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination flex-between mt-4">
+             <span class="text-sub font-small">Showing 1-10 of 45</span>
+             <div class="page-controls flex gap-1">
+                <button disabled class="icon-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="active action-button small-button button-blue">1</button>
+                <button class="icon-btn">2</button>
+                <button class="icon-btn">3</button>
+                <button class="icon-btn"><i class="fa-solid fa-chevron-right"></i></button>
+             </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

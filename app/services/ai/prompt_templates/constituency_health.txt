@@ -1,0 +1,7 @@
+Analyze the overall health of the constituency based on ward and department data.
+Context: {{ context }}
+
+Return:
+- Sector Scores
+- Overall Score
+- Weak Areas

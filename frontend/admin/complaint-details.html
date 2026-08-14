@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complaint Details | Mahanaayak OS</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">MAIN</div>
+          <a class="sidebar-link active" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room</span></a>
+          <a class="sidebar-link" href="./executive-brief.html"><span class="icon-circle"><i class="fa-solid fa-bolt"></i></span><span>AI Executive Brief</span></a>
+          
+          <div class="nav-section mt-4">MANAGEMENT</div>
+          <a class="sidebar-link" href="./team-members.html"><span class="icon-circle"><i class="fa-solid fa-users"></i></span><span>Team Management</span></a>
+          <a class="sidebar-link" href="./citizens.html"><span class="icon-circle"><i class="fa-solid fa-address-book"></i></span><span>Citizen Database</span></a>
+          
+          <div class="nav-section mt-4">INTELLIGENCE</div>
+          <a class="sidebar-link" href="./health-dashboard.html"><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span><span>Constituency Health</span></a>
+          <a class="sidebar-link" href="./ward-health.html"><span class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></span><span>Ward Intelligence</span></a>
+          <a class="sidebar-link" href="./ward-comparison.html"><span class="icon-circle"><i class="fa-solid fa-code-compare"></i></span><span>Ward Comparison</span></a>
+          
+          <div class="nav-section mt-4">OPERATIONS</div>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-bullhorn"></i></span><span>Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-building"></i></span><span>Departments</span></a>
+          <a class="sidebar-link" href="./reports.html"><span class="icon-circle"><i class="fa-solid fa-file-invoice"></i></span><span>Reports Center</span></a>
+          
+          <div class="nav-section mt-4">SYSTEM</div>
+          <a class="sidebar-link" href="./activity-logs.html"><span class="icon-circle"><i class="fa-solid fa-list-check"></i></span><span>Activity Logs</span></a>
+          <a class="sidebar-link" href="./system-monitoring.html"><span class="icon-circle"><i class="fa-solid fa-server"></i></span><span>System Monitoring</span></a>
+          <a class="sidebar-link" href="./settings.html"><span class="icon-circle"><i class="fa-solid fa-gear"></i></span><span>Settings</span></a>
+        </nav>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Complaint Intelligence</h1>
+            <div class="page-header-subtitle">Pune Constituency Intelligence</div>
+          </div>
+          <div class="page-header-actions header-kpis">
+             <button class="icon-btn" aria-label="Global Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </header>
+
+        <div class="breadcrumb font-small text-sub mb-4">
+           <a href="war-room.html" class="text-cyan text-decoration-none">War Room</a> &rsaquo; <span class="text-0">Ticket #TKT-2026-8901</span>
+        </div>
+        
+        <section class="page-grid grid-two-wide">
+          <!-- Left Column: Details -->
+          <div class="details-column">
+             <div class="panel ticket-header-panel mb-4">
+                <div class="flex-between mb-3">
+                   <div class="ticket-id-large text-title font-bold text-cyan">TKT-2026-8901</div>
+                   <div class="ticket-badges flex gap-2">
+                      <span class="status-chip chip-warning"><i class="fa-solid fa-clock"></i> Open</span>
+                      <span class="status-chip chip-critical"><i class="fa-solid fa-fire"></i> Critical</span>
+                   </div>
+                </div>
+                <h2 class="ticket-title font-section mt-0">Severe water logging and drainage overflow on Main Street</h2>
+                <div class="ticket-meta mt-3 flex gap-3 text-sub font-small">
+                   <span><i class="fa-solid fa-location-dot"></i> Ward 12, Kothrud</span>
+                   <span><i class="fa-solid fa-calendar"></i> Reported: 2 hours ago</span>
+                   <span><i class="fa-solid fa-building"></i> Dept: Public Works</span>
+                </div>
+             </div>
+
+             <div class="panel ai-summary-panel mb-4 ai-gradient-bg">
+                <div class="panel-header mb-3">
+                   <div class="chart-title"><i class="fa-solid fa-brain text-purple"></i> AI Intelligence Summary</div>
+                </div>
+                <div class="ai-summary-content">
+                   <p class="ai-text text-0 font-body"><strong>Analysis:</strong> The citizen is reporting acute drainage failure leading to water logging. Sentiment is highly frustrated. Similar issues have been reported 3 times in this 500m radius in the last month.</p>
+                   <div class="ai-suggestions mt-4 flex gap-3">
+                      <div class="ai-suggestion-box flex-1 bg-surface-1 p-3 rounded-sm border-soft">
+                         <span class="ai-label d-block text-sub font-label uppercase mb-1">Suggested Dept</span>
+                         <strong class="text-0 font-small">Municipal Drainage Dept</strong>
+                      </div>
+                      <div class="ai-suggestion-box flex-1 bg-surface-1 p-3 rounded-sm border-soft">
+                         <span class="ai-label d-block text-sub font-label uppercase mb-1">SLA Risk</span>
+                         <strong class="text-red font-small">High (Rain forecasted)</strong>
+                      </div>
+                      <div class="ai-suggestion-box flex-1 bg-surface-1 p-3 rounded-sm border-soft">
+                         <span class="ai-label d-block text-sub font-label uppercase mb-1">Priority Action</span>
+                         <strong class="text-0 font-small">Dispatch vacuum truck immediately</strong>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="panel mb-4">
+                <div class="panel-header mb-3"><div class="chart-title">Attachments & Evidence</div></div>
+                <div class="media-gallery flex gap-3">
+                   <div class="media-item w-20 h-20 bg-surface-1 rounded-sm flex-center text-title text-sub"><i class="fa-solid fa-image"></i></div>
+                   <div class="media-item w-20 h-20 bg-surface-1 rounded-sm flex-center text-title text-sub"><i class="fa-solid fa-image"></i></div>
+                   <div class="media-item w-20 h-20 bg-surface-1 border-dashed-cyan rounded-sm flex-center flex-column text-small text-cyan cursor-pointer"><i class="fa-solid fa-cloud-arrow-up text-title mb-2"></i> Upload</div>
+                </div>
+             </div>
+             
+             <div class="panel mb-4">
+                <div class="panel-header flex-between mb-3">
+                   <div class="chart-title">Possible Duplicates Detected</div>
+                   <span class="badge bg-red-soft text-red px-2 py-1 rounded-full font-label border-red-soft">1 Match</span>
+                </div>
+                <div class="duplicate-warning p-3 rounded-md border-soft flex-between bg-surface-2">
+                   <div>
+                      <strong class="d-block mb-1">TKT-2026-8850</strong>
+                      <span class="font-small text-sub">Drainage block near Kothrud Depot (85% Similarity)</span>
+                   </div>
+                   <button class="action-button button-outline small-button">Review & Merge</button>
+                </div>
+             </div>
+          </div>
+
+          <!-- Right Column: Timeline & Citizen Info -->
+          <div class="sidebar-column">
+             <div class="panel mb-4">
+                <div class="panel-header mb-3"><div class="chart-title">Citizen Details</div></div>
+                <div class="citizen-mini-profile">
+                   <div class="user-cell mb-3 flex gap-3 align-center">
+                      <div class="avatar bg-blue">S</div>
+                      <div>
+                        <strong class="d-block font-body">Suresh Patel</strong>
+                        <div class="text-sub font-small">+91 9988776655</div>
+                      </div>
+                   </div>
+                   <div class="citizen-stats font-small">
+                      <div class="stat-row flex-between mb-2"><span>Total Complaints:</span> <strong>3</strong></div>
+                      <div class="stat-row flex-between mb-2"><span>Voter Status:</span> <strong class="text-success">Verified</strong></div>
+                      <a href="citizen-details.html" class="action-button button-outline w-100 text-center mt-3 d-block">View Full Profile</a>
+                   </div>
+                </div>
+             </div>
+
+             <div class="panel timeline-panel">
+                <div class="panel-header mb-3"><div class="chart-title">Resolution Timeline</div></div>
+                <div class="vertical-timeline">
+                   <div class="timeline-item active">
+                      <div class="timeline-marker"><i class="fa-solid fa-file-signature"></i></div>
+                      <div class="timeline-content">
+                         <h5>Complaint Registered</h5>
+                         <span class="time">Today, 10:30 AM</span>
+                         <p>Citizen submitted via Mobile App</p>
+                      </div>
+                   </div>
+                   <div class="timeline-item active">
+                      <div class="timeline-marker"><i class="fa-solid fa-brain"></i></div>
+                      <div class="timeline-content">
+                         <h5>AI Triage Completed</h5>
+                         <span class="time">Today, 10:31 AM</span>
+                         <p>Routed to Public Works (Severity: Critical)</p>
+                      </div>
+                   </div>
+                   <div class="timeline-item pending">
+                      <div class="timeline-marker"><i class="fa-solid fa-hard-hat"></i></div>
+                      <div class="timeline-content opacity-60">
+                         <h5>Department Acceptance</h5>
+                         <span class="time">Pending</span>
+                      </div>
+                   </div>
+                </div>
+                
+                <div class="timeline-actions mt-4 pt-3 border-t-soft">
+                   <select class="toolbar-select w-100 mb-2"><option>Update Status...</option><option>Accept Issue</option></select>
+                   <textarea class="form-input w-100 mb-2" rows="3" placeholder="Add internal remark..."></textarea>
+                   <button class="action-button button-blue w-100">Post Update</button>
+                </div>
+             </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports Center | Mahanaayak OS</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modal.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-page war-room-page">
+      <aside class="sidebar" aria-label="Main navigation">
+        <div class="sidebar-brand">
+          <div class="brand-title"><span class="brand-accent">MAHANAAYAK</span> OS</div>
+          <div class="brand-subtitle">STAFF PORTAL</div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">MAIN</div>
+          <a class="sidebar-link" href="./war-room.html"><span class="icon-circle"><i class="fa-solid fa-grid-2"></i></span><span>War Room</span></a>
+          <a class="sidebar-link" href="./executive-brief.html"><span class="icon-circle"><i class="fa-solid fa-bolt"></i></span><span>AI Executive Brief</span></a>
+          
+          <div class="nav-section mt-4">MANAGEMENT</div>
+          <a class="sidebar-link" href="./team-members.html"><span class="icon-circle"><i class="fa-solid fa-users"></i></span><span>Team Management</span></a>
+          <a class="sidebar-link" href="./citizens.html"><span class="icon-circle"><i class="fa-solid fa-address-book"></i></span><span>Citizen Database</span></a>
+          
+          <div class="nav-section mt-4">INTELLIGENCE</div>
+          <a class="sidebar-link" href="./health-dashboard.html"><span class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></span><span>Constituency Health</span></a>
+          <a class="sidebar-link" href="./ward-health.html"><span class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></span><span>Ward Intelligence</span></a>
+          <a class="sidebar-link" href="./ward-comparison.html"><span class="icon-circle"><i class="fa-solid fa-code-compare"></i></span><span>Ward Comparison</span></a>
+          
+          <div class="nav-section mt-4">OPERATIONS</div>
+          <a class="sidebar-link" href="./campaign.html"><span class="icon-circle"><i class="fa-solid fa-bullhorn"></i></span><span>Campaign Planner</span></a>
+          <a class="sidebar-link" href="./department.html"><span class="icon-circle"><i class="fa-solid fa-building"></i></span><span>Departments</span></a>
+          <a class="sidebar-link active" href="./reports.html"><span class="icon-circle"><i class="fa-solid fa-file-invoice"></i></span><span>Reports Center</span></a>
+          
+          <div class="nav-section mt-4">SYSTEM</div>
+          <a class="sidebar-link" href="./activity-logs.html"><span class="icon-circle"><i class="fa-solid fa-list-check"></i></span><span>Activity Logs</span></a>
+          <a class="sidebar-link" href="./system-monitoring.html"><span class="icon-circle"><i class="fa-solid fa-server"></i></span><span>System Monitoring</span></a>
+          <a class="sidebar-link" href="./settings.html"><span class="icon-circle"><i class="fa-solid fa-gear"></i></span><span>Settings</span></a>
+        </nav>
+      </aside>
+
+      <main class="content-shell">
+        <header class="page-header">
+          <div>
+            <h1 class="page-header-title">Reports Center</h1>
+            <div class="page-header-subtitle">Business Intelligence & Document Generation</div>
+          </div>
+          <div class="page-header-actions header-kpis">
+             <button class="icon-btn" aria-label="Global Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+             <button class="icon-btn"><i class="fa-solid fa-bell"></i><span class="notification-badge">3</span></button>
+          </div>
+        </header>
+
+        <section class="page-grid grid-3">
+           <div class="panel">
+              <div class="panel-header mb-3">
+                 <div class="chart-title"><i class="fa-solid fa-calendar-day text-blue"></i> Daily Reports</div>
+              </div>
+              <p class="text-sub font-small mb-4">Generate comprehensive daily summaries of all constituency activities, complaints, and team performance.</p>
+              <div class="flex flex-column gap-2">
+                 <button class="action-button button-outline w-100"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+                 <button class="action-button button-outline w-100"><i class="fa-solid fa-file-excel"></i> Download Excel</button>
+              </div>
+           </div>
+           
+           <div class="panel">
+              <div class="panel-header mb-3">
+                 <div class="chart-title"><i class="fa-solid fa-building text-purple"></i> Department Reports</div>
+              </div>
+              <p class="text-sub font-small mb-4">Detailed analysis of department SLAs, resolution times, and outstanding critical issues across all wards.</p>
+              <div class="flex flex-column gap-2">
+                 <button class="action-button button-outline w-100"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+                 <button class="action-button button-outline w-100"><i class="fa-solid fa-file-excel"></i> Download Excel</button>
+              </div>
+           </div>
+           
+           <div class="panel">
+              <div class="panel-header mb-3">
+                 <div class="chart-title"><i class="fa-solid fa-users text-amber"></i> Member Performance</div>
+              </div>
+              <p class="text-sub font-small mb-4">Track field officer activities, issue resolution rate, and constituent feedback scores per member.</p>
+              <div class="flex flex-column gap-2">
+                 <button class="action-button button-outline w-100"><i class="fa-solid fa-file-pdf"></i> Download PDF</button>
+                 <button class="action-button button-outline w-100"><i class="fa-solid fa-file-excel"></i> Download Excel</button>
+              </div>
+           </div>
+        </section>
+
+        <section class="panel table-panel mt-4">
+          <div class="panel-header mb-3"><div class="chart-title">Saved & Scheduled Reports</div></div>
+          <div class="ticket-table-wrap mt-3">
+            <table class="ticket-table">
+              <thead>
+                <tr>
+                  <th>REPORT NAME</th>
+                  <th>SCHEDULE</th>
+                  <th>LAST GENERATED</th>
+                  <th>FORMAT</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Weekly Constituency Health</strong></td>
+                  <td><span class="badge bg-surface-3 text-sub rounded-sm px-2 py-1 font-label">Every Monday, 8:00 AM</span></td>
+                  <td>Today, 08:05 AM</td>
+                  <td>PDF, Excel</td>
+                  <td>
+                    <button class="action-button small-button button-outline">Download Latest</button>
+                    <button class="icon-btn text-sub ml-2"><i class="fa-solid fa-pen"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Monthly Water Dept SLA</strong></td>
+                  <td><span class="badge bg-surface-3 text-sub rounded-sm px-2 py-1 font-label">1st of Month, 9:00 AM</span></td>
+                  <td>01 Aug 2026</td>
+                  <td>PDF</td>
+                  <td>
+                    <button class="action-button small-button button-outline">Download Latest</button>
+                    <button class="icon-btn text-sub ml-2"><i class="fa-solid fa-pen"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
